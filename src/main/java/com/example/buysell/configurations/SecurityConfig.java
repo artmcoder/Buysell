@@ -1,6 +1,5 @@
 package com.example.buysell.configurations;
 
-
 import com.example.buysell.services.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/registration", "/product/**", "/images/**")
+                .antMatchers("/", "/product/**", "/images/**", "/registration")
                 .permitAll()
                 .anyRequest().authenticated()
                 .and()

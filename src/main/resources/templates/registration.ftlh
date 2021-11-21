@@ -8,12 +8,12 @@
 <h4>Регистрация</h4>
 <form action="/registration" method="post">
     Имя пользователя: <input type="text" name="name"><br><br>
-    Email: <input type="email" name="email"><br><br>
-    Номер телефона: <input type="text" name="phoneNumber"><br><br>
+    Эл. почта: <input type="email" name="email"><br><br>
+    Номер телефона: <input type="text" name="numberPhone"><br><br>
     Пароль: <input type="password" name="password"><br><br>
-    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-    <input type="submit" value="Зарегистрироваться">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="Вход"/>
 </form>
-<#if errorMessage??><h3 style="color: red">${errorMessage?ifExists}</h3></#if>
+
 </body>
 </html>
