@@ -4,13 +4,17 @@
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
+<h1>BUYSELL</h1>
+<hr>
 <#if user.email??>
     <h3>Имя пользователя: <i>${user.name}</i></h3>
     <form action="/logout" method="post">
         <input type="hidden" name="_csrf" value="${_csrf.token}">
         <input type="submit" value="Выйти"/>
     </form>
+    <#if user.isAdmin()>
+        <a href="/admin">Панель администратора</a>
+    </#if>
 <#else>
     <a href="/login">Войти</a></h1>
 </#if>
