@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>BUYSELL</title>
-</head>
-<body>
-<h1>BUYSELL</h1><hr>
-<h3>Редактирование пользователя ${user.name}</h3>
+<#import "blocks/template.ftlh" as t>
+<@t.template user>
+<h1 style="text-align: center">Редактирование пользователя ${user.name}</h1><hr>
 <form action="/admin/user/edit" method="post">
     <#list roles as role>
         <div>
@@ -14,7 +9,7 @@
     </#list>
     <input type="hidden" value="${user.id}" name="userId">
     <input type="hidden" value="${_csrf.token}" name="_csrf">
-    <button type="submit">Сохранить</button>
+    <button type="submit" class="btn btn-dark">Сохранить</button>
 </form>
-</body>
-</html>
+
+</@t.template>

@@ -11,7 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>buysell</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>buysell</name>
+    <name>com.example.buysell</name>
     <description>Clone Avito</description>
     <properties>
         <java.version>11</java.version>
